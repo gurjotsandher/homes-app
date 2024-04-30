@@ -30,6 +30,6 @@ jobs:
       - name: Deploy to GitHub Pages (v2)
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          branch: main  # Or any other branch you'd like to deploy to
+          branch: gh-pages  # Or any other branch you'd like to deploy to
           folder: dist  # Replace <your-project-name> with your actual project name
           token: ${{ secrets.GITHUB_TOKEN }}
