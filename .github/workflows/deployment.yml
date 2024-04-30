@@ -1,4 +1,4 @@
-name: GitHub 
+name: GitHub Page Front-End
 
 on:
   push:
