@@ -10,6 +10,7 @@
     "build:prod": "ng build --configuration production --base-href https://gurjotsandher.github.io/homes-app/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
     "e2e": "ng e2e"
   },
   "private": true,
