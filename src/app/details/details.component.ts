@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   template: `
     <p>
       details works!
+      Change
     </p>
   `,
   styleUrls: ['./details.component.css']
