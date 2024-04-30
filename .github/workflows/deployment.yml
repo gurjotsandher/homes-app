@@ -27,7 +27,7 @@ jobs:
       - name: Build Angular app
         run: ng build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (v2)
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           branch: main  # Or any other branch you'd like to deploy to
