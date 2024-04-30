@@ -27,9 +27,6 @@ jobs:
       - name: Build
         run: npm run build:prod
 
-      - name: List. Find the Artifact and index.html file.
-        run: ls
-
       - name: Deploy Preview
         uses: peaceiris/actions-gh-pages@v3
         with:
