@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   imports: [CommonModule],
   template: `
     <p>
-      AGAIN.
+      From the protected branch.
     </p>
   `,
   styleUrls: ['./details.component.css']
