@@ -1,0 +1,36 @@
+name: Pull Request Preview
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy_preview:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build:prod
+
+      - name: Deploy Preview
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
+          enable_jekyll: true
+          cname: ${{ github.event.pull_request.head.repo.owner.login }}-${{ github.event.pull_request.number }}.preview.example.com
