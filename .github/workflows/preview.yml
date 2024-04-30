@@ -33,4 +33,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
           enable_jekyll: true
-          cname: ${{ github.event.pull_request.head.repo.owner.login }}-${{ github.event.pull_request.number }}.preview.example.com
+          cname: ${{ github.event.pull_request.head.repo.owner.login }}-${{ github.event.pull_request.number }}
